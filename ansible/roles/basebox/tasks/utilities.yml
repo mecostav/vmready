@@ -1,0 +1,41 @@
+---
+
+- name: Debian-based distro detected
+  block:
+
+#    - name: Add repositories
+#      apt_repository:
+#        state: present
+#        update_cache: yes
+#        repo: "{{ UTILITIES_APT_ADD_REPOSITORIES }}"
+
+    - name: Installing/Updating APT packages.
+      apt:
+        state: latest
+        force_apt_get: yes
+        name: "{{ UTILITIES_APT_INSTALL }}"
+      notify: Cleanup APT
+
+    - name: Installing snaps with --classic flag.
+      snap:
+        state: present
+        classic: yes
+        name: "{{ UTILITIES_CLASSIC_SNAP_INSTALL }}"
+
+    - name: Installing snaps.
+      snap:
+        state: present
+        name: "{{ UTILITIES_SNAP_INSTALL }}"
+
+    - name: Copy .conkyrc file.
+      copy:
+        owner: "{{ USER }}"
+        group: "{{ USER_GROUP }}"
+        mode: 0744
+        force: yes
+        src:  "files/utilities/.conkyrc"
+        dest: "/home/{{ USER }}/.conkyrc"
+
+
+  when:
+    - ansible_facts['distribution'] == "Ubuntu" or ansible_facts['distribution'] == "Debian"

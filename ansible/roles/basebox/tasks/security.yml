@@ -1,0 +1,7 @@
+---
+
+- name: Debian-based distro detected
+  block:
+
+  when:
+    - ansible_facts['distribution'] == "Ubuntu" || ansible_facts['distribution'] == "Debian"

@@ -1,0 +1,36 @@
+---
+
+- name: Debian-based distro detected
+  block:
+
+    - name: Installing/Updating Aptitude package manager.
+      apt:
+        state: latest
+        force_apt_get: yes
+        name:
+          - aptitude
+          - aptitude-common
+          - python-apt
+      notify: Cleanup APT
+
+    - name: Installing packages
+      apt:
+        state: present
+        name: "{{ PACKAGES_APT_INSTALL }}"
+      notify: Cleanup APT
+
+    - name: Removing unecessary packages
+      apt:
+        state: absent
+        purge: yes
+        name: "{{ PACKAGES_APT_REMOVE }}"
+      notify: Cleanup APT
+
+    - name: Installing updates
+      apt:
+        update_cache: yes
+        upgrade: full
+      notify: Cleanup APT
+
+  when:
+    - ansible_facts['distribution'] == "Ubuntu" or ansible_facts['distribution'] == "Debian"

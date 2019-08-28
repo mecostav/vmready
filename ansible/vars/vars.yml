@@ -1,0 +1,6 @@
+---
+
+USER: vagrant
+USER_GROUP: vagrant
+
+DATADOG_APP_KEY: ""

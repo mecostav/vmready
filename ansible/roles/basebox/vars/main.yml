@@ -1,0 +1,45 @@
+---
+
+PACKAGES_APT_INSTALL:
+  - git
+  - unzip
+  - tar
+  - wget
+  - curl
+  - jq
+  - ntp
+  - snapd
+
+PACKAGES_APT_REMOVE: 
+  - ubuntu-web-launchers
+  - aisleriot
+  - gnome-sudoku
+  - gnome-mines
+  - gnome-mahjongg
+  - transmission-*
+  - libreoffice*
+  - byobu
+
+THEME_APT_INSTALL:
+  - gnome-tweak-tool
+  - unity-control-center
+
+UTILITIES_APT_ADD_REPOSITORIES:
+  - "ppa:peek-developers/stable"
+
+UTILITIES_APT_INSTALL:
+  - conky
+  - conky-all
+  - remmina*
+  - chromium-browser
+  - peek
+
+UTILITIES_CLASSIC_SNAP_INSTALL:
+  - atom
+  - code
+  - slack
+
+UTILITIES_SNAP_INSTALL:
+  - vlc
+  - spotify
+  - wps-office-multilang

@@ -1,0 +1,16 @@
+---
+
+- name: Debian-based distro detected
+  block:
+
+    - name: Copy .bashrc file.
+      copy:
+        owner: "{{ USER }}"
+        group: "{{ USER_GROUP }}"
+        mode: 0744
+        force: yes
+        src:  "files/theme/.bashrc"
+        dest: "/home/{{ USER }}/.bashrc"
+
+  when:
+    - ansible_facts['distribution'] == "Ubuntu" or ansible_facts['distribution'] == "Debian"
