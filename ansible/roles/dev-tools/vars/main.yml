@@ -1,0 +1,29 @@
+---
+
+CORE_TOOLS_APT_INSTALL:
+  - apt-transport-https
+  - ca-certificates
+  - curl
+  - software-properties-common
+  - snapd
+  - virtualbox
+  - vagrant
+  - docker-compose
+  - nodejs
+
+CORE_TOOLS_APT_REMOVE:
+  - docker
+  - docker-engine
+  - docker.io
+
+CORE_TOOLS_CLASSIC_SNAP_INSTALL:
+  - code
+
+CORE_TOOLS_SNAP_INSTALL:
+  - docker
+  - postman
+
+VSCODE_INSTALL_EXTENSIONS:
+  - eamodio.gitlens
+  - oderwat.indent-rainbow
+  - ms-azuretools.vscode-docker

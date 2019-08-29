@@ -1,6 +1,12 @@
 to install:
-    * stracer
+    * linuxbrew
     * fail2ban
     * clamav
 
 to remove:
+
+update:
+    pip2
+    pip3
+    npm
+    linuxbrew

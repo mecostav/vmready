@@ -1,0 +1,7 @@
+---
+
+- name: Cleanup APT
+  apt:
+    force_apt_get: yes
+    autoclean: yes
+    autoremove: yes

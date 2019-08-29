@@ -27,9 +27,10 @@ Vagrant.configure("2") do |config|
     config.vm.provision "ansible_local" do |ansible|
         ####    @costav
         ####    uncomment if you require any additional plabooks
-        ansible.playbook = "./ansible/basebox.yml"
-        #ansible.playboox = "./ansible/network-tools.yml"
-        #ansible.playboox = "./ansible/dev-tools.yml"
+        #ansible.playbook = "./ansible/basebox.yml"
+        #ansible.playbook = "./ansible/network-tools.yml"
+        #ansible.playbook = "./ansible/dev-tools.yml"
+        ansible.playbook = "./ansible/full.yml"
     end
 
 #    config.vm.provision "docker" do |docker|

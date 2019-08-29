@@ -3,11 +3,11 @@
 - name: Debian-based distro detected
   block:
 
-#    - name: Add repositories
-#      apt_repository:
-#        state: present
-#        update_cache: yes
-#        repo: "{{ UTILITIES_APT_ADD_REPOSITORIES }}"
+    - name: Add repositories
+      apt_repository:
+        state: present
+        update_cache: yes
+        repo: "{{ UTILITIES_APT_ADD_REPOSITORIES }}"
 
     - name: Installing/Updating APT packages.
       apt:
@@ -35,6 +35,18 @@
         force: yes
         src:  "files/utilities/.conkyrc"
         dest: "/home/{{ USER }}/.conkyrc"
+
+    - name: Adding startup packages.
+      cron:
+        special_time: reboot
+        name: start conky
+        user: "{{ USER }}"
+        job: conky
+
+    - name: Installing Stracer.
+      apt:
+        deb: https://github.com/oguzhaninan/Stacer/releases/download/v1.0.4/Stacer_1.0.4_amd64.deb
+        install_recommends: yes
 
 
   when:

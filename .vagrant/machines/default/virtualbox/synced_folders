@@ -1,1 +1,1 @@
-{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"/home/costav/Desktop/dev/vagrant-dev-box","disabled":false,"__vagrantfile":true}}}
+{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"/home/costav/Desktop/dev/workready-vm","disabled":false,"__vagrantfile":true}}}

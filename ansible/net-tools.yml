@@ -8,5 +8,4 @@
 
   roles:
     - basebox
-    - core-tools
-    - network-tools
+    - net-tools

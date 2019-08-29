@@ -9,6 +9,7 @@ PACKAGES_APT_INSTALL:
   - jq
   - ntp
   - snapd
+  - xz-utils
 
 PACKAGES_APT_REMOVE: 
   - ubuntu-web-launchers
@@ -19,13 +20,13 @@ PACKAGES_APT_REMOVE:
   - transmission-*
   - libreoffice*
   - byobu
+  - firefox
 
 THEME_APT_INSTALL:
   - gnome-tweak-tool
   - unity-control-center
 
-UTILITIES_APT_ADD_REPOSITORIES:
-  - "ppa:peek-developers/stable"
+UTILITIES_APT_ADD_REPOSITORIES: "ppa:peek-developers/stable"
 
 UTILITIES_APT_INSTALL:
   - conky
@@ -36,10 +37,11 @@ UTILITIES_APT_INSTALL:
 
 UTILITIES_CLASSIC_SNAP_INSTALL:
   - atom
-  - code
   - slack
 
 UTILITIES_SNAP_INSTALL:
   - vlc
   - spotify
   - wps-office-multilang
+  - firefox
+  - tusk
