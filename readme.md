@@ -3,7 +3,7 @@
 
 ![GitHub Logo](https://media2.giphy.com/media/l1CC5T7JDUfU62uTC/source.gif)
 
-** can be used as an ansible playbook to configure your Ubuntu instalation **
+**Can be used as an ansible playbook to configure your Ubuntu instalation**
 
 ### Currently only the following linux distros are supported:
 
@@ -53,7 +53,7 @@ $ vagrant up
 
 >You are good to go
 
-###Ansible playbook: (No VM)
+### Ansible playbook: (No VM)
 ```
 $ git clone git@github.com:mecostav/workready-vm.git
 $ cd ansible
