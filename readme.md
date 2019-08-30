@@ -30,10 +30,10 @@
 
 '''
 #!/usr/bin/env bash
-sudo apt-get install software-properties-common
-sudo apt-add-repository ppa:ansible/ansible
-sudo apt-get update
-sudo apt-get install ansible
+$ sudo apt-get install software-properties-common
+$ sudo apt-add-repository ppa:ansible/ansible
+$ sudo apt-get update
+$ sudo apt-get install ansible
 '''
 
 ### How to run:
@@ -60,10 +60,10 @@ $ ansible-playbook -i "localhost," -c local <playbook-name>.yml
 
 > there are 4 playbooks in the ansible folder
 
-- [ ] **basebox**:      installs core utilities. does not come with an IDE and other development/network tools
-- [ ] **dev-tools**:    installs development tools.
-- [ ] **net-tools**:    provides network tools.
-- [ ] **full**:         includes all of the previous
+* **basebox**:      installs core utilities. does not come with an IDE and other development/network tools
+* **dev-tools**:    installs development tools.
+* **net-tools**:    provides network tools.
+* **full**:         includes all of the previous
 
 #### when you are done working do:
 '''
