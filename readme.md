@@ -19,13 +19,13 @@
 
 ###Requirements
 
-####For Vagrant (If you are using the VM)
+###For Vagrant (If you are using the VM)
 
 - [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 - [Virtualbox expansion pack](https://download.virtualbox.org/virtualbox/6.0.10/Oracle_VM_VirtualBox_Extension_Pack-6.0.10.vbox-extpack)
 - [Vagrant](https://www.vagrantup.com/)
 
-####For ansible-playbook (No VM required)
+###For ansible-playbook (No VM required)
 - ansible
 
 '''
@@ -38,7 +38,7 @@ $ sudo apt-get install ansible
 
 ###How to run:
 
-####Vagrant box:
+###Vagrant box:
 '''
 $ git clone git@github.com:mecostav/workready-vm.git
 $ cd workread-vm
@@ -54,7 +54,7 @@ $ vagrant up
 
 >You are good to go
 
-####Ansible playbook: (No VM)
+###Ansible playbook: (No VM)
 '''
 $ git clone git@github.com:mecostav/workready-vm.git
 $ cd ansible
@@ -68,18 +68,19 @@ $ ansible-playbook -i "localhost," -c local <playbook-name>.yml
 * **net-tools**:    provides network tools.
 * **full**:         includes all of the previous
 
-#### When you are done working do:
+### When you are done working do:
 '''
 vagrant halt
 '''
 
-#### To start the VM again do:
+### To start the VM again do:
 ''''
 vagrant up
 ''''
 
-#### Snapshotting your vm
+### Snapshotting your vm
 >Once you have your VM has booted up and started it is good practice to snapshot your VM
+
 '''
 vagrant shapshot save <snapshot-name>
 '''
