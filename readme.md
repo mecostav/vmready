@@ -3,7 +3,7 @@
 
 ![GitHub Logo](https://media2.giphy.com/media/l1CC5T7JDUfU62uTC/source.gif)
 
-*** can be used as an ansible playbook to configure your Ubuntu instalation ***
+** can be used as an ansible playbook to configure your Ubuntu instalation **
 
 ### Currently only the following linux distros are supported:
 
@@ -60,10 +60,10 @@ $ ansible-playbook -i "localhost," -c local <playbook-name>.yml
 
 > there are 4 playbooks in the ansible folder
 
-- **[ ] basebox**: installs core utilities. does not come with an IDE and other development/network tools
-- **[ ] dev-tools**: installs development tools.
-- **[ ] net-tools**: provides network tools.
-- **[ ] full**: includes all of the previous
+- [ ] **basebox**:      installs core utilities. does not come with an IDE and other development/network tools
+- [ ] **dev-tools**:    installs development tools.
+- [ ] **net-tools**:    provides network tools.
+- [ ] **full**:         includes all of the previous
 
 #### when you are done working do:
 '''
