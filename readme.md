@@ -75,7 +75,7 @@ $ vagrant halt
 ### To start the VM again do:
 ```'
 $ vagrant up
-```'
+```
 
 ### Snapshotting your vm
 >Once you have your VM has booted up and started it is good practice to snapshot your VM
