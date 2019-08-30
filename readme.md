@@ -28,38 +28,38 @@
 ###For ansible-playbook (No VM required)
 - ansible
 
-'''
+```
 #!/usr/bin/env bash
 $ sudo apt-get install software-properties-common
 $ sudo apt-add-repository ppa:ansible/ansible
 $ sudo apt-get update
 $ sudo apt-get install ansible
-'''
+```
 
 ###How to run:
 
 ###Vagrant box:
-'''
+```
 $ git clone git@github.com:mecostav/workready-vm.git
 $ cd workread-vm
 $ vagrant up
-'''
+```
 
 >Wait until the script finishes. It might take some time as its building the GUI from the source
 
-'''
+```
 - vagrant halt
 - vagrant up
-'''
+```
 
 >You are good to go
 
 ###Ansible playbook: (No VM)
-'''
+```
 $ git clone git@github.com:mecostav/workready-vm.git
 $ cd ansible
 $ ansible-playbook -i "localhost," -c local <playbook-name>.yml
-'''
+```
 
 > there are 4 playbooks in the ansible folder
 
@@ -69,21 +69,21 @@ $ ansible-playbook -i "localhost," -c local <playbook-name>.yml
 * **full**:         includes all of the previous
 
 ### When you are done working do:
-'''
+```
 vagrant halt
-'''
+```
 
 ### To start the VM again do:
-''''
+```'
 vagrant up
-''''
+```'
 
 ### Snapshotting your vm
 >Once you have your VM has booted up and started it is good practice to snapshot your VM
 
-'''
+```
 vagrant shapshot save <snapshot-name>
-'''
+```
 
 ## Special thanks
 
