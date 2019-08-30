@@ -44,14 +44,14 @@ $ cd workread-vm
 $ vagrant up
 ```
 
->Wait until the script finishes. It might take some time as its building the GUI from the source
+**Wait until the script finishes. It might take some time as its building the GUI from the source**
 
 ```
 $ vagrant halt
 $ vagrant up
 ```
 
->You are good to go
+**You are good to go**
 
 ### Ansible playbook: (No VM)
 ```
@@ -60,7 +60,7 @@ $ cd ansible
 $ ansible-playbook -i "localhost," -c local <playbook-name>.yml
 ```
 
-> there are 4 playbooks in the ansible folder
+there are 4 playbooks in the ansible folder
 
 * **basebox**:      installs core utilities. does not come with an IDE and other development/network tools
 * **dev-tools**:    installs development tools.
@@ -78,7 +78,7 @@ $ vagrant up
 ```
 
 ### Snapshotting your vm
->Once you have your VM has booted up and started it is good practice to snapshot your VM
+Once you have your VM has booted up and started it is good practice to snapshot your VM
 
 ```
 $ vagrant shapshot save <snapshot-name>
@@ -86,4 +86,4 @@ $ vagrant shapshot save <snapshot-name>
 
 ## Special thanks
 
-> Shoutout to [AndyMacDroo](https://github.com/AndyMacDroo) for inpiration for this repo.
+Shoutout to [AndyMacDroo](https://github.com/AndyMacDroo) for inpiration for this repo.
