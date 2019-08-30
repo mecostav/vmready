@@ -5,7 +5,7 @@
 
 ** can be used as an ansible playbook to configure your Ubuntu instalation **
 
-###Currently only the following linux distros are supported:
+### Currently only the following linux distros are supported:
 
 - [x] Ubuntu 18
 - [x] Ubuntu 16
@@ -17,28 +17,27 @@
 - [ ] Fedora (TBA)
 - [ ] CentOS (TBA)
 
-###Requirements
+### Requirements
 
-###For Vagrant (If you are using the VM)
+### For Vagrant (If you are using the VM)
 
 - [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 - [Virtualbox expansion pack](https://download.virtualbox.org/virtualbox/6.0.10/Oracle_VM_VirtualBox_Extension_Pack-6.0.10.vbox-extpack)
 - [Vagrant](https://www.vagrantup.com/)
 
-###For ansible-playbook (No VM required)
+### For ansible-playbook (No VM required)
 - ansible
 
 ```
-#!/usr/bin/env bash
 $ sudo apt-get install software-properties-common
 $ sudo apt-add-repository ppa:ansible/ansible
 $ sudo apt-get update
 $ sudo apt-get install ansible
 ```
 
-###How to run:
+### How to run:
 
-###Vagrant box:
+### Vagrant box:
 ```
 $ git clone git@github.com:mecostav/workready-vm.git
 $ cd workread-vm
@@ -48,8 +47,8 @@ $ vagrant up
 >Wait until the script finishes. It might take some time as its building the GUI from the source
 
 ```
-- vagrant halt
-- vagrant up
+$ vagrant halt
+$ vagrant up
 ```
 
 >You are good to go
@@ -70,19 +69,19 @@ $ ansible-playbook -i "localhost," -c local <playbook-name>.yml
 
 ### When you are done working do:
 ```
-vagrant halt
+$ vagrant halt
 ```
 
 ### To start the VM again do:
 ```'
-vagrant up
+$ vagrant up
 ```'
 
 ### Snapshotting your vm
 >Once you have your VM has booted up and started it is good practice to snapshot your VM
 
 ```
-vagrant shapshot save <snapshot-name>
+$ vagrant shapshot save <snapshot-name>
 ```
 
 ## Special thanks
