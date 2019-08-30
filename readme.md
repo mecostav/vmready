@@ -1,17 +1,21 @@
-# *WORKREADY-VM**:
-### 2 in 1 vagrant ubuntu box with a an ansible playbook to configure it.
+# VMREADY:
+### 2 in 1 vagrant ubuntu box with an ansible playbook to configure it.
 
 ![GitHub Logo](https://media2.giphy.com/media/l1CC5T7JDUfU62uTC/source.gif)
+
 *** can be used as an ansible playbook to configure your Ubuntu instalation ***
 
 ### Currently only the following linux distros are supported:
 
 - [x] Ubuntu 18
 - [x] Ubuntu 16
-- [ ] **Partial** Debian support
-- [ ] **Partial** Mint support
+- [ ] Debian support (**Partial**)
+- [ ] Mint support   (**Partial**)
 
 > In the future i would like to add support for RHEL based distros, however, no plans have been made so far. Sorry!
+
+- [ ] Fedora (TBA)
+- [ ] CentOS (TBA)
 
 ### Requirements
 
@@ -22,12 +26,19 @@
 - [Vagrant](https://www.vagrantup.com/)
 
 #### For ansible-playbook (No VM required)
-
 - ansible
+
+'''
+#!/usr/bin/env bash
+sudo apt-get install software-properties-common
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt-get update
+sudo apt-get install ansible
+'''
 
 ### How to run:
 
-####Vagrant box:**
+####Vagrant box:
 '''
 $ git clone git@github.com:mecostav/workready-vm.git
 $ cd workread-vm
@@ -49,10 +60,10 @@ $ ansible-playbook -i "localhost," -c local <playbook-name>.yml
 
 > there are 4 playbooks in the ansible folder
 
-- basebox: installs core utilities. does not come with an IDE and other development/network tools
-- dev-tools: installs development tools.
-- net-tools: provides network tools.
-- full: includes all of the previous
+- **[ ] basebox**: installs core utilities. does not come with an IDE and other development/network tools
+- **[ ] dev-tools**: installs development tools.
+- **[ ] net-tools**: provides network tools.
+- **[ ] full**: includes all of the previous
 
 #### when you are done working do:
 '''
@@ -65,7 +76,11 @@ vagrant up
 ''''
 
 #### Snapshotting your vm
-Once you have your VM has booted up and started it is good practice to snapshot your VM
+>Once you have your VM has booted up and started it is good practice to snapshot your VM
 '''
 vagrant shapshot save <snapshot-name>
 '''
+
+## Special thanks
+
+> Shoutout to [AndyMacDroo](https://github.com/AndyMacDroo) for inpiration for this repo.
