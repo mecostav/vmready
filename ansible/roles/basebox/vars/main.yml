@@ -25,6 +25,16 @@ PACKAGES_APT_REMOVE:
 THEME_APT_INSTALL:
   - gnome-tweak-tool
   - unity-control-center
+  - gnome-shell-extensions
+  - gnome-shell-extension-caffeine
+  - gnome-shell-extension-dashtodock
+  - gnome-shell-extension-impatience
+  #- gnome-shell-extension-multi-monitor
+  - gnome-shell-extension-no-annoyance
+
+THEME_ENABLE_EXTENSIONS:
+  - "Caffeine"
+  - "Dash to dock"
 
 UTILITIES_APT_ADD_REPOSITORIES: "ppa:peek-developers/stable"
 

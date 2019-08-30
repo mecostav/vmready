@@ -12,5 +12,20 @@
         src:  "files/theme/.bashrc"
         dest: "/home/{{ USER }}/.bashrc"
 
+    - name: Installing/Updating APT packages.`
+      apt:
+        state: latest
+        force_apt_get: yes
+        name: "{{ THEME_APT_INSTALL }}"
+      notify: Cleanup APT
+
+    - name: Enabling gnome extensions.
+      shell: sudo -H -u "{{ USER }}" bash -c "gnome-shell-extension-tool -e {{ item }}"
+      args:
+        warn: no
+      with_items: "{{ THEME_ENABLE_EXTENSIONS }}"
+      changed_when: false
+
+
   when:
     - ansible_facts['distribution'] == "Ubuntu" or ansible_facts['distribution'] == "Debian"

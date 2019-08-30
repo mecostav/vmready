@@ -27,7 +27,7 @@
         state: present
         name: "{{ UTILITIES_SNAP_INSTALL }}"
 
-    - name: Copy .conkyrc file.
+    - name: Copying .conkyrc file.
       copy:
         owner: "{{ USER }}"
         group: "{{ USER_GROUP }}"
@@ -41,7 +41,7 @@
         special_time: reboot
         name: start conky
         user: "{{ USER }}"
-        job: conky
+        job: sleep 30; conky -b &
 
     - name: Installing Stracer.
       apt:
